@@ -8,6 +8,7 @@ NER, 문서 요약 모듈 및 서버를 포함합니다.
 
 ## Requirement
 ```
+pip install flask
 pip install -U spacy
 python -m spacy download en_core_web_sm
 ```

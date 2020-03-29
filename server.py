@@ -24,6 +24,6 @@ def ner():
     for ent in doc.ents:
         if ent.label_ not in target_labels:
             continue
-        ent_list.append({'label': ent.label, 'text': ent.text})
+        ent_list.append({'label': ent.label_, 'text': ent.text})
 
     return jsonify({'status': 200, 'ent_list': ent_list }) 
