@@ -25,6 +25,7 @@ python -m spacy download en_core_web_sm
 
 ## Summarization
 - TextRank
+	 - https://github.com/DerwenAI/pytextrank
 - LexRank
 
 
