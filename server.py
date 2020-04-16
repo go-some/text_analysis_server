@@ -34,11 +34,14 @@ def sum_():
 def ner():
     text = request.form.get('text')
     doc = nlp(text)
-
+    visited = set()
     ent_list = []
     for ent in doc.ents:
         if ent.label_ not in target_labels:
             continue
+        if ent.text in visited:
+            continue
         ent_list.append({'label': ent.label_, 'text': ent.text})
+        visited.add(ent.text)
 
     return jsonify({'status': 200, 'ent_list': ent_list }) 
